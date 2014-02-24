@@ -46,4 +46,15 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'annotate', '>= 2.5.0'
+end
+
+group :test do
+  gem 'shoulda-matchers', '~> 2.5'
+end
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+  gem 'rack-mini-profiler'
 end
