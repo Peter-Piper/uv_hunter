@@ -55,7 +55,7 @@ GEM
     diff-lcs (1.2.5)
     erubis (2.7.0)
     execjs (2.0.2)
-    foundation-rails (5.1.1.0)
+    foundation-rails (5.0.3.1)
       railties (>= 3.1.0)
       sass (>= 3.2.0)
     hike (1.2.3)
@@ -162,7 +162,7 @@ DEPENDENCIES
   binding_of_caller
   coffee-rails (~> 4.0.0)
   devise (~> 3.2.2)
-  foundation-rails (~> 5.1.1)
+  foundation-rails (~> 5.0.3.1)
   jbuilder (~> 1.2)
   jquery-rails
   pg
