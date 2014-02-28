@@ -7,7 +7,9 @@
     </ul>
     <div class="top-bar-section">
       <ul class="right">
-        <%= render 'layouts/navigation_links' %>
+        <% if signed_in? %>
+            <%= render 'layouts/navigation_links' %>
+        <% end %>
       </ul>
     </div>
   </nav>

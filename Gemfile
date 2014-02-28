@@ -47,10 +47,18 @@ end
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
   gem 'annotate', '>= 2.5.0'
+  gem 'quiet_assets', '>= 1.0.2'
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'pry-debugger'
 end
 
 group :test do
+  gem 'capybara'
   gem 'shoulda-matchers', '~> 2.5'
+  gem 'ZenTest', '4.9.0'
+  gem 'factory_girl_rails', '>= 4.4.1', require: false
+  gem 'database_cleaner', require: false
 end
 
 group :development do
