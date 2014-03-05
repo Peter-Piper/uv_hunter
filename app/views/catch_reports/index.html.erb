@@ -1,0 +1,35 @@
+<h1>Listing catch_reports</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Description</th>
+      <th>Gps coords</th>
+      <th>User</th>
+      <th>Start time</th>
+      <th>Stop time</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @catch_reports.each do |catch_report| %>
+      <tr>
+        <td><%= catch_report.description %></td>
+        <td><%= catch_report.gps_coords %></td>
+        <td><%= catch_report.user %></td>
+        <td><%= catch_report.start_time %></td>
+        <td><%= catch_report.stop_time %></td>
+        <td><%= link_to 'Show', catch_report %></td>
+        <td><%= link_to 'Edit', edit_catch_report_path(catch_report) %></td>
+        <td><%= link_to 'Destroy', catch_report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Catch report', new_catch_report_path %>

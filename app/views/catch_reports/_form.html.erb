@@ -1,0 +1,31 @@
+<%= form_for(@catch_report) do |f| %>
+    <div class="row">
+      <div class="small-12 columns">
+        <%= f.text_area :description %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 columns">
+        <%= f.text_field :gps_coords %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 columns">
+        <%= f.number_field :start_time %>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 columns">
+        <%= f.number_field :stop_time %>
+      </div>
+    </div>
+
+    <div class="actions row">
+      <div class="small-5 small-offset-3 columns">
+        <%= f.submit class: 'button tiny radius' %>
+      </div>
+      <div class="small-4 columns">
+        <%= link_to 'cancel', catch_reports_path, class: 'button tiny expand secondary radius' %>
+      </div>
+    </div>
+<% end %>
