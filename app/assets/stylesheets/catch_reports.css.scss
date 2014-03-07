@@ -1,0 +1,18 @@
+#show-mode-tab-container {
+  #list-mode-tab-container {
+    padding-right: 0;
+  }
+
+  #map-mode-tab-container {
+    padding-left: 0;
+  }
+
+  .mode-tab {
+    margin-bottom: 0;
+    background-color: rgba(146, 255, 59, 0.51);
+  }
+
+  .active-mode-tab {
+    background-color: rgb(146, 255, 59);
+  }
+}

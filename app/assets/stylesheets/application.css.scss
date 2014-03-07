@@ -10,4 +10,11 @@
  *
  *= require_self
  *= require_tree .
+ *
+ * vendor scripts
+ *= require 'glyphicons'
  */
+
+.row {
+  max-width: 80rem !important;
+}

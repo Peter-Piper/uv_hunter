@@ -1,4 +1,5 @@
 class CatchReportsController < ApplicationController
+  skip_before_filter :authenticate_user!, only: [:index]
   before_action :set_catch_report, only: [:show, :edit, :update, :destroy]
 
   # GET /catch_reports
@@ -62,13 +63,13 @@ class CatchReportsController < ApplicationController
   end
 
   private
-    # Use callbacks to share common setup or constraints between actions.
-    def set_catch_report
-      @catch_report = CatchReport.find(params[:id])
-    end
+  # Use callbacks to share common setup or constraints between actions.
+  def set_catch_report
+    @catch_report = CatchReport.find(params[:id])
+  end
 
-    # Never trust parameters from the scary internet, only allow the white list through.
-    def catch_report_params
-      params.require(:catch_report).permit(:description, :gps_coords, :user_id, :start_time, :stop_time)
-    end
+  # Never trust parameters from the scary internet, only allow the white list through.
+  def catch_report_params
+    params.require(:catch_report).permit(:description, :gps_coords, :user_id, :start_time, :stop_time)
+  end
 end

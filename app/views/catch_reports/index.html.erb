@@ -1,35 +1,23 @@
-<h1>Listing catch_reports</h1>
+<div class="row">
+  <div class="small-12 columns">
+    <a class="tiny radius button">Filter</a>
+  </div>
+</div>
 
-<table>
-  <thead>
-    <tr>
-      <th>Description</th>
-      <th>Gps coords</th>
-      <th>User</th>
-      <th>Start time</th>
-      <th>Stop time</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+<div id="show-mode-tab-container" class="row hide-for-large">
+  <div id="list-mode-tab-container" class="small-6 columns">
+    <div id="list-mode-tab" class="expand button mode-tab active-mode-tab">Liste</div>
+  </div>
+  <div id="map-mode-tab-container" class="small-6 columns">
+    <div id="map-mode-tab" class="expand button mode-tab">Kort</div>
+  </div>
+</div>
 
-  <tbody>
-    <% @catch_reports.each do |catch_report| %>
-      <tr>
-        <td><%= catch_report.description %></td>
-        <td><%= catch_report.gps_coords %></td>
-        <td><%= catch_report.user %></td>
-        <td><%= catch_report.start_time %></td>
-        <td><%= catch_report.stop_time %></td>
-        <td><%= link_to 'Show', catch_report %></td>
-        <td><%= link_to 'Edit', edit_catch_report_path(catch_report) %></td>
-        <td><%= link_to 'Destroy', catch_report, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Catch report', new_catch_report_path %>
+<div class="row">
+  <div id="list-container" class="small-12 large-8 columns">
+    <%= render 'index_table' %>
+  </div>
+  <div id="map-container" class="small-12 large-4 columns hide-for-small">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1143639.2812244077!2d10.075887584374996!3d55.955083191730075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sda!2sdk!4v1394204563797" width="100%" height="350px" frameborder="0" style="border:0"></iframe>
+  </div>
+</div>

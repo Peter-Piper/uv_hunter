@@ -1,0 +1,25 @@
+<table>
+  <thead>
+  <tr>
+    <th>Description</th>
+    <th class="hide-for-small">Gps coords</th>
+    <th>User</th>
+    <th class="hide-for-small">Start time</th>
+    <th class="hide-for-small">Stop time</th>
+    <th></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @catch_reports.each do |catch_report| %>
+      <tr>
+        <td><%= catch_report.description %></td>
+        <td class="hide-for-small"><%= catch_report.gps_coords %></td>
+        <td><%= catch_report.user %></td>
+        <td class="hide-for-small"><%= catch_report.start_time %></td>
+        <td class="hide-for-small"><%= catch_report.stop_time %></td>
+        <td><%= link_to 'Show', catch_report %></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>
