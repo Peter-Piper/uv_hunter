@@ -34,8 +34,8 @@
 // $total-columns: 12;
 
 // We use these to control various global styles
-// $body-bg: #fff;
-// $body-font-color: #222;
+$body-bg: #373737;
+$body-font-color: #fdfdfd;
 // $body-font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
 // $body-font-weight: normal;
 // $body-font-style: normal;
@@ -49,8 +49,8 @@
 // $default-float: left;
 
 // We use these as default colors throughout
-// $primary-color: #008CBA;
-// $secondary-color: #e7e7e7;
+$primary-color: #24586E;
+$secondary-color: #45626E ;
 $alert-color: rgba(223, 68, 64, 0.81);
 // $success-color: #43AC6A;
 // $warning-color: #f08a24;
@@ -114,7 +114,7 @@ $alert-color: rgba(223, 68, 64, 0.81);
 // $header-font-family: $body-font-family;
 // $header-font-weight: 300;
 // $header-font-style: normal;
-// $header-font-color: #222;
+$header-font-color: #fff;
 // $header-line-height: 1.4;
 // $header-top-margin: .2rem;
 // $header-bottom-margin: .5rem;
@@ -157,7 +157,7 @@ $alert-color: rgba(223, 68, 64, 0.81);
 
 // We use these to style anchors
 // $anchor-text-decoration: none;
-// $anchor-font-color: $primary-color;
+ $anchor-font-color: $body-font-color;
 // $anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
 
 // We use these to style the <hr> element
@@ -477,7 +477,7 @@ $alert-color: rgba(223, 68, 64, 0.81);
 // $form-label-font-size: rem-calc(14);
 // $form-label-font-weight: normal;
 // $form-label-line-height: 1.5;
-// $form-label-font-color: scale-color(#000, $lightness: 30%);
+$form-label-font-color: $body-font-color;
 // $form-label-bottom-margin: 0;
 // $input-font-family: inherit;
 // $input-font-color: rgba(0,0,0,0.75);
@@ -1117,7 +1117,7 @@ $alert-color: rgba(223, 68, 64, 0.81);
 // $include-html-top-bar-classes: $include-html-classes;
 
 // Background color for the top bar
-// $topbar-bg-color: #333;
+$topbar-bg-color: scale-color($body-bg, $lightness: 8%);
 // $topbar-bg: $topbar-bg-color;
 
 // Height and margin
@@ -1129,7 +1129,7 @@ $topbar-margin-bottom: 5px;
 // $topbar-title-font-size: rem-calc(17);
 
 // Style the top bar dropdown elements
-// $topbar-dropdown-bg: #333;
+ $topbar-dropdown-bg: $topbar-bg-color;
 // $topbar-dropdown-link-color: #fff;
 // $topbar-dropdown-link-bg: #333;
 // $topbar-dropdown-link-weight: normal;
@@ -1138,7 +1138,7 @@ $topbar-margin-bottom: 5px;
 // $topbar-dropdown-toggle-alpha: 0.4;
 
 // Set the link colors and styles for top-level nav
-// $topbar-link-color: #fff;
+ $topbar-link-color: scale-color($topbar-bg-color, $lightness: 100%);
 // $topbar-link-color-hover: #fff;
 // $topbar-link-color-active: #fff;
 // $topbar-link-color-active-hover: #fff;
@@ -1174,8 +1174,8 @@ $topbar-margin-bottom: 5px;
 // $topbar-media-query: "only screen and (min-width: #{upper-bound($medium-range)})";
 
 // Divider Styles
-// $topbar-divider-border-bottom: solid 1px  scale-color($topbar-bg-color, $lightness: 13%);
-// $topbar-divider-border-top: solid 1px scale-color($topbar-bg-color, $lightness: -50%);
+// $topbar-divider-border-bottom: solid 1px  scale-color($topbar-bg-color, $lightness: 43%);
+ $topbar-divider-border-top: solid 1px scale-color($topbar-link-color, $lightness: -60%);
 
 // Sticky Class
 // $topbar-sticky-class: ".sticky";
@@ -1187,4 +1187,40 @@ $topbar-margin-bottom: 5px;
 
 // $include-html-visibility-classes: $include-html-classes;
 
-@import 'foundation';
+@import
+"foundation/components/accordion",
+"foundation/components/alert-boxes",
+"foundation/components/block-grid",
+"foundation/components/breadcrumbs",
+"foundation/components/button-groups",
+"foundation/components/buttons",
+"foundation/components/clearing",
+"foundation/components/dropdown",
+"foundation/components/dropdown-buttons",
+"foundation/components/flex-video",
+"foundation/components/forms",
+"foundation/components/grid",
+"foundation/components/inline-lists",
+"foundation/components/joyride",
+"foundation/components/keystrokes",
+"foundation/components/labels",
+"foundation/components/magellan",
+"foundation/components/orbit",
+"foundation/components/pagination",
+"foundation/components/panels",
+"foundation/components/pricing-tables",
+"foundation/components/progress-bars",
+"foundation/components/range-slider",
+"foundation/components/reveal",
+"foundation/components/side-nav",
+"foundation/components/split-buttons",
+"foundation/components/sub-nav",
+"foundation/components/switch",
+"foundation/components/tables",
+"foundation/components/tabs",
+"foundation/components/thumbs",
+"foundation/components/tooltips",
+"foundation/components/top-bar",
+"foundation/components/type",
+"foundation/components/offcanvas",
+"foundation/components/visibility";

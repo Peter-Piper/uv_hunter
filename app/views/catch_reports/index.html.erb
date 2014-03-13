@@ -1,15 +1,15 @@
 <div class="row">
   <div class="small-12 columns">
-    <a class="tiny radius button">Filter</a>
+    <a class="tiny secondary radius button">Filter</a>
   </div>
 </div>
 
-<div id="show-mode-tab-container" class="row hide-for-large">
+<div id="show-mode-tab-container" class="row hide-for-medium-up">
   <div id="list-mode-tab-container" class="small-6 columns">
-    <div id="list-mode-tab" class="expand button mode-tab active-mode-tab">Liste</div>
+    <div id="list-mode-tab" class="expand button">Liste</div>
   </div>
   <div id="map-mode-tab-container" class="small-6 columns">
-    <div id="map-mode-tab" class="expand button mode-tab">Kort</div>
+    <div id="map-mode-tab" class="expand button inactive-tab">Kort</div>
   </div>
 </div>
 
@@ -18,6 +18,8 @@
     <%= render 'index_table' %>
   </div>
   <div id="map-container" class="small-12 large-4 columns hide-for-small">
-    <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d1143639.2812244077!2d10.075887584374996!3d55.955083191730075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sda!2sdk!4v1394204563797" width="100%" height="350px" frameborder="0" style="border:0"></iframe>
+    <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+            src="http://www.openstreetmap.org/export/embed.html?bbox=2.8894042968749996%2C54.06583577161278%2C17.0068359375%2C58.6769376725869&amp;layer=mapnik"
+            style="border: 1px solid black"></iframe>
   </div>
 </div>
