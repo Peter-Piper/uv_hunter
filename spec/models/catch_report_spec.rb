@@ -15,5 +15,9 @@
 require 'spec_helper'
 
 describe CatchReport do
-  pending "add some examples to (or delete) #{__FILE__}"
+  it { should belong_to(:user) }
+  it { should have_many(:catches).dependent(:destroy) }
+  it { should have_many(:fish).through(:catches) }
+
+  it { should accept_nested_attributes_for(:catches) }
 end

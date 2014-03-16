@@ -1,4 +1,4 @@
-# == Route Map (Updated 2014-03-06 00:25)
+# == Route Map (Updated 2014-03-16 13:24)
 #
 #                   Prefix Verb   URI Pattern                       Controller#Action
 #            catch_reports GET    /catch_reports(.:format)          catch_reports#index
@@ -23,7 +23,7 @@
 #                          PATCH  /users(.:format)                  devise/registrations#update
 #                          PUT    /users(.:format)                  devise/registrations#update
 #                          DELETE /users(.:format)                  devise/registrations#destroy
-#                     root GET    /                                 front_page#index
+#                     root GET    /                                 catch_reports#index
 #
 
 Uvhunter::Application.routes.draw do

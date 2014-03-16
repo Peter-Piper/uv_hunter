@@ -38,7 +38,7 @@ class CatchReportsController < ApplicationController
     end
   end
 
-  # PATCH/PUT /catch_reports/1
+  # PATClH/PUT /catch_reports/1
   # PATCH/PUT /catch_reports/1.json
   def update
     respond_to do |format|
