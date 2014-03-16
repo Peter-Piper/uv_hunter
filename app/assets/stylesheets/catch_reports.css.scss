@@ -1,8 +1,25 @@
 $tab-color: #3C94BB;
 
 #show-mode-tab-container {
-  #list-mode-tab-container { padding-right: 0; }
-  #map-mode-tab-container { padding-left: 0; }
-  .inactive-tab { background-color: rgba(36, 88, 110, 0.65); }
-  .button { margin-bottom: 0 !important; }
+  #list-mode-tab-container {
+    padding-right: 0;
+  }
+  #map-mode-tab-container {
+    padding-left: 0;
+  }
+  .inactive-tab {
+    background-color: rgba(36, 88, 110, 0.65);
+  }
+  .button {
+    margin-bottom: 0 !important;
+  }
+}
+
+table {
+  .date-column {
+    width: 75px;
+  }
+  .lnk-to-show-column {
+    width: 10px;
+  }
 }

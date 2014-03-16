@@ -23,8 +23,14 @@
   </div>
   <div class="small-12 columns">
     <p>
-      <strong>Description:</strong>
+      <strong>Beretning:</strong>
       <%= @catch_report.description %>
+    </p>
+  </div>
+  <div class="small-12 columns">
+    <p>
+      <strong>Fangster:</strong>
+      <%= render 'catch_list', catches: @catch_report.catches %>
     </p>
   </div>
 </div>

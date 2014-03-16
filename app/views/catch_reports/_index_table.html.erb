@@ -1,24 +1,24 @@
 <table>
   <thead>
   <tr>
-    <th>Dato</th>
-    <th>Beretning</th>
+    <th class="date-column">Dato</th>
+    <th class="catch-column">Fangster</th>
     <th class="hide-for-small">Gps coords</th>
     <th class="hide-for-small">Start time</th>
     <th class="hide-for-small">Stop time</th>
-    <th></th>
+    <th class="lnk-to-show-column"></th>
   </tr>
   </thead>
 
   <tbody>
   <% @catch_reports.each do |catch_report| %>
       <tr>
-        <td><%= catch_report.created_at.strftime("%d/%m '%y") %></td>
-        <td><%= catch_report.description %></td>
+        <td class="date-column"><%= catch_report.created_at.strftime("%d/%m-%y") %></td>
+        <td class="catch-column"><%= render 'catch_list', catches: catch_report.catches %></td>
         <td class="hide-for-small"><%= catch_report.gps_coords %></td>
         <td class="hide-for-small"><%= catch_report.start_time %></td>
         <td class="hide-for-small"><%= catch_report.stop_time %></td>
-        <td><%= link_to 'Show', catch_report %></td>
+        <td class="lnk-to-show-column"><%= link_to 'Show', catch_report %></td>
       </tr>
   <% end %>
   </tbody>

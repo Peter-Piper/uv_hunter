@@ -1,0 +1,11 @@
+<% if catches.any? %>
+    <ul>
+      <% catches.each do |catch| %>
+          <li>
+            <span class="c-name"><%= catch.fish.name %></span>
+            <span class="c-weight"><%= "#{number_with_precision(catch.weight, precision: 1)}kg" %></span>
+            <span class="c-length"><%= "#{number_with_precision(catch.length, precision: 1)}cm" %></span>
+          </li>
+      <% end %>
+    </ul>
+<% end %>

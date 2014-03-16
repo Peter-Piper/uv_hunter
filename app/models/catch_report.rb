@@ -18,6 +18,4 @@ class CatchReport < ActiveRecord::Base
   has_many :fish, through: :catches
 
   accepts_nested_attributes_for(:catches)
-
-  validates_presence_of :gps_coords
 end
