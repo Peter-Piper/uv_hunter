@@ -15,10 +15,6 @@
 .authform form p {
   font-size: rem-calc(13);
 }
-.authform #error_explanation {
-  @extend .alert-box;
-  @extend .alert;
-}
 .authform #error_explanation h2 {
   font-size: rem-calc(16);
   color: white;

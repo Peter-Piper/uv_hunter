@@ -22,6 +22,14 @@ development:
   password: Huntard
   host: localhost
 
+production:
+  adapter: postgresql
+  database: uvhunter_develop
+  pool: 5
+  username: hunter
+  password: Huntard
+  host: localhost
+
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
   # domain sockets, so uncomment these lines.
