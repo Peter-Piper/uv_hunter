@@ -15,7 +15,7 @@ gem 'devise', '~> 3.2.2'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
-gem 'foundation-rails', '~> 5.2.0.0'
+gem 'foundation-rails', '~> 5.2.1'
 gem 'foundation_rails_helper'
 
 # Use Uglifier as compressor for JavaScript assets
@@ -64,5 +64,6 @@ end
 group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'sprockets_better_errors'
 #  gem 'rack-mini-profiler'
 end
