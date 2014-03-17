@@ -15,11 +15,32 @@ $tab-color: #3C94BB;
   }
 }
 
-table {
+#catch-reports-table {
   .date-column {
     width: 75px;
   }
+
+  .catch-column {
+    ul {
+      margin: 0;
+      list-style-type: none;
+      line-height: inherit;
+      font-size: inherit;
+    }
+
+    .c-weight {
+      margin-left: 15px;
+    }
+  }
+
   .lnk-to-show-column {
-    width: 10px;
+    cursor: pointer;
+    padding: 0;
+    text-align: center;
+
+    i {
+      width:  16px;
+      height: 16px;
+    }
   }
 }
