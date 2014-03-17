@@ -16,11 +16,11 @@
 #
 development:
   adapter: postgresql
-  encoding: unicode
-  database: uvhunter_development
+  database: uvhunter_develop
   pool: 5
-  username: uvhunter
-  password:
+  username: hunter
+  password: Huntard
+  host: localhost
 
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
@@ -45,16 +45,8 @@ development:
 # Do not set this db to the same as development or production.
 test:
   adapter: postgresql
-  encoding: unicode
   database: uvhunter_test
   pool: 5
-  username: uvhunter
-  password:
-
-production:
-  adapter: postgresql
-  encoding: unicode
-  database: uvhunter_production
-  pool: 5
-  username: uvhunter
-  password:
+  username: hunter
+  password: Huntard
+  host: localhost

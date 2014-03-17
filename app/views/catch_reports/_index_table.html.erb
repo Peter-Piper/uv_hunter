@@ -1,0 +1,25 @@
+<table id="catch-reports-table" data-path="<%= catch_report_path(':id') %>">
+  <thead>
+  <tr>
+    <th class="date-column">Dato</th>
+    <th class="catch-column">Fangster</th>
+    <th class="hide-for-small">Gps coords</th>
+    <th class="hide-for-small">Start time</th>
+    <th class="hide-for-small">Stop time</th>
+    <th class="lnk-to-show-column"></th>
+  </tr>
+  </thead>
+
+  <tbody>
+  <% @catch_reports.each do |catch_report| %>
+      <tr data-id="<%= catch_report.id %>">
+        <td class="date-column"><%= catch_report.created_at.strftime("%d/%m-%y") %></td>
+        <td class="catch-column"><%= render 'catch_list', catches: catch_report.catches %></td>
+        <td class="hide-for-small"><%= catch_report.gps_coords %></td>
+        <td class="hide-for-small"><%= catch_report.start_time %></td>
+        <td class="hide-for-small"><%= catch_report.stop_time %></td>
+        <td class="lnk-to-show-column"><i class="icon-chevron-right"></i></td>
+      </tr>
+  <% end %>
+  </tbody>
+</table>

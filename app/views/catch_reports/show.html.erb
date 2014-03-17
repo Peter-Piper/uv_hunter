@@ -1,0 +1,45 @@
+<p id="notice"><%= notice %></p>
+<div class="row">
+  <div class="small-7 columns">
+    <div class="row">
+      <div class="small-12 columns">
+        <p>
+          <strong>Dato</strong>
+          <%= @catch_report.created_at.strftime("%d/%m '%y") %>
+        </p>
+      </div>
+      <div class="small-12 columns">
+        <p>
+          <strong>Gps coords:</strong>
+          <%= @catch_report.gps_coords %>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div class="small-5 columns">
+    <div class="map" style="height: 125px; background-color: grey;">
+      USER portrait
+    </div>
+  </div>
+  <div class="small-12 columns">
+    <p>
+      <strong>Beretning:</strong>
+      <%= @catch_report.description %>
+    </p>
+  </div>
+  <div class="small-12 columns">
+    <p>
+      <strong>Fangster:</strong>
+      <%= render 'catch_list', catches: @catch_report.catches %>
+    </p>
+  </div>
+</div>
+
+<div class="actions row">
+  <div class="small-5 small-offset-3 columns">
+    <%= link_to 'Edit', edit_catch_report_path(@catch_report), class: 'button tiny radius' %>
+  </div>
+  <div class="small-4 columns">
+    <%= link_to 'cancel', catch_reports_path, class: 'button tiny expand secondary radius' %>
+  </div>
+</div>

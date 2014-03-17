@@ -9,6 +9,22 @@
  * compiled file, but it's generally better to create a new file per style scope.
  *
  *= require_self
- *= require foundation_and_overrides
  *= require_tree .
+ *
+ * vendor scripts
+ *= require 'glyphicons'
  */
+
+header {
+  padding-bottom: 1px;
+  margin-bottom: 5px;
+}
+
+.row {
+  max-width: 80rem !important;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}

@@ -1,0 +1,25 @@
+<div class="row">
+  <div class="small-12 columns">
+    <a class="tiny secondary radius button">Filter</a>
+  </div>
+</div>
+
+<div id="show-mode-tab-container" class="row hide-for-medium-up">
+  <div id="list-mode-tab-container" class="small-6 columns">
+    <div id="list-mode-tab" class="expand button">Liste</div>
+  </div>
+  <div id="map-mode-tab-container" class="small-6 columns">
+    <div id="map-mode-tab" class="expand button inactive-tab">Kort</div>
+  </div>
+</div>
+
+<div class="row">
+  <div id="list-container" class="small-12 large-8 columns">
+    <%= render 'index_table' %>
+  </div>
+  <div id="map-container" class="small-12 large-4 columns hide-for-small">
+    <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
+            src="http://www.openstreetmap.org/export/embed.html?bbox=2.8894042968749996%2C54.06583577161278%2C17.0068359375%2C58.6769376725869&amp;layer=mapnik"
+            style="border: 1px solid black"></iframe>
+  </div>
+</div>

@@ -10,16 +10,11 @@ gem 'devise', '~> 3.2.2'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
-gem 'foundation-rails', '~> 5.1.1'
+gem 'foundation-rails', '~> 5.2.0.0'
+gem 'foundation_rails_helper'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
-
-# Use CoffeeScript for .js.coffee assets and views
-gem 'coffee-rails', '~> 4.0.0'
-
-# See https://github.com/sstephenson/execjs#readme for more supported runtimes
-# gem 'therubyracer', platforms: :ruby
 
 # Use jquery as the JavaScript library
 gem 'jquery-rails'
@@ -46,4 +41,23 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'
+  gem 'annotate', '>= 2.5.0'
+  gem 'quiet_assets', '>= 1.0.2'
+  gem 'pry'
+  gem 'pry-rails'
+  gem 'pry-debugger'
+end
+
+group :test do
+  gem 'capybara'
+  gem 'shoulda-matchers', '~> 2.5'
+  gem 'ZenTest', '4.9.0'
+  gem 'factory_girl_rails', '>= 4.4.1', require: false
+  gem 'database_cleaner', require: false
+end
+
+group :development do
+  gem 'better_errors'
+  gem 'binding_of_caller'
+#  gem 'rack-mini-profiler'
 end
