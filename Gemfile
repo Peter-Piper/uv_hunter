@@ -15,7 +15,7 @@ gem 'devise', '~> 3.2.2'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
-gem 'foundation-rails', '~> 5.2.1'
+gem 'foundation-rails', '~> 5.2.0'
 gem 'foundation_rails_helper'
 
 # Use Uglifier as compressor for JavaScript assets
