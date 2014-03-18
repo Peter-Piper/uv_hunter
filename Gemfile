@@ -5,7 +5,7 @@ ruby '1.9.3'
 gem 'rails', '4.0.3'
 
 group :production do
-  gem 'rails_12factor'
+  gem 'rails_12factor' # needed by heroku
 end
 
 # Use postgresql as the database for Active Record
@@ -15,8 +15,8 @@ gem 'devise', '~> 3.2.2'
 
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
-gem 'foundation-rails', '5.2.1'
-gem 'foundation_rails_helper'
+gem 'foundation-rails', '5.2.1'  # foundation for rails
+gem 'foundation_rails_helper' # pretty 'fields-with-errors'
 
 # Use Uglifier as compressor for JavaScript assets
 gem 'uglifier', '>= 1.3.0'
@@ -35,14 +35,7 @@ group :doc do
   gem 'sdoc', require: false
 end
 
-# Use ActiveModel has_secure_password
-# gem 'bcrypt-ruby', '~> 3.1.2'
-
-# Use unicorn as the app server
-# gem 'unicorn'
-
-# Use Capistrano for deployment
-# gem 'capistrano', group: :development
+gem 'kaminari', '~> 0.15.1' # scope-based pagination
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0.beta'

@@ -15,6 +15,9 @@
 
 <div class="row">
   <div id="list-container" class="small-12 large-8 columns">
+    <div class="pagination-centered">
+      <%= paginate @catch_reports %>
+    </div>
     <%= render 'index_table' %>
   </div>
   <div id="map-container" class="small-12 large-4 columns hide-for-small">
