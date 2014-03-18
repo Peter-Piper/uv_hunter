@@ -16,6 +16,8 @@ $tab-color: #3C94BB;
 }
 
 #catch-reports-table {
+  margin-bottom: 0px;
+
   .date-column {
     width: 75px;
   }
@@ -43,4 +45,8 @@ $tab-color: #3C94BB;
       height: 16px;
     }
   }
+}
+
+#catch-reports-pagination-container {
+ margin-top: 1rem;
 }

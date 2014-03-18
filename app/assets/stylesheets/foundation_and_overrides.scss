@@ -20,9 +20,9 @@
 // $base-line-height: 150%;
 
 // We use this to control whether or not CSS classes come through in the gem files.
- $include-html-classes: true;
+$include-html-classes: true;
 // $include-print-styles: true;
- $include-html-global-classes: $include-html-classes;
+$include-html-global-classes: $include-html-classes;
 
 // Grid
 
@@ -30,7 +30,7 @@
 // $include-xl-html-grid-classes: false;
 
 // $row-width: rem-calc(1000);
- $column-gutter: rem-calc(30);
+$column-gutter: rem-calc(30);
 // $total-columns: 12;
 
 // We use these to control various global styles
@@ -50,7 +50,7 @@ $body-font-color: #fdfdfd;
 
 // We use these as default colors throughout
 $primary-color: #24586E;
-$secondary-color: #45626E ;
+$secondary-color: #45626E;
 $alert-color: rgba(223, 68, 64, 0.81);
 // $success-color: #43AC6A;
 // $warning-color: #f08a24;
@@ -157,7 +157,7 @@ $header-font-color: #fff;
 
 // We use these to style anchors
 // $anchor-text-decoration: none;
- $anchor-font-color: $body-font-color;
+$anchor-font-color: $body-font-color;
 // $anchor-font-color-hover: scale-color($primary-color, $lightness: -14%);
 
 // We use these to style the <hr> element
@@ -734,19 +734,19 @@ $form-label-font-color: $body-font-color;
 // We use these to set the list-item properties
 // $pagination-li-float: $default-float;
 // $pagination-li-height: rem-calc(24);
-// $pagination-li-font-color: #222;
+ $pagination-li-font-color: #ddd;
 // $pagination-li-font-size: rem-calc(14);
 // $pagination-li-margin: rem-calc(5);
 
 // We use these for the pagination anchor links
 // $pagination-link-pad: rem-calc(1 10 1);
-// $pagination-link-font-color: #999;
- $pagination-link-active-bg: scale-color(#fff, $lightness: -10%);
+$pagination-link-font-color: scale-color($pagination-li-font-color, $lightness: -25%);
+$pagination-link-active-bg: $pagination-li-font-color;
 
 // We use these for disabled anchor links
 // $pagination-link-unavailable-cursor: default;
-// $pagination-link-unavailable-font-color: #999;
-$pagination-link-unavailable-bg-active: scale-color(#fff, $lightness: -30%);
+$pagination-link-unavailable-font-color: scale-color($pagination-link-font-color, $lightness: -25%);;
+$pagination-link-unavailable-bg-active: transparent;
 
 // We use these for currently selected anchor links
 // $pagination-link-current-background: $primary-color;
@@ -1038,7 +1038,7 @@ $pagination-link-unavailable-bg-active: scale-color(#fff, $lightness: -30%);
 // $table-head-padding: rem-calc(8 10 10);
 
 // These control the row padding and font styles
- $table-row-padding: rem-calc(4 5);
+$table-row-padding: rem-calc(4 5);
 // $table-row-font-size: rem-calc(14);
 // $table-row-font-color: #222;
 // $table-line-height: rem-calc(18);
@@ -1129,7 +1129,7 @@ $topbar-margin-bottom: 5px;
 // $topbar-title-font-size: rem-calc(17);
 
 // Style the top bar dropdown elements
- $topbar-dropdown-bg: $topbar-bg-color;
+$topbar-dropdown-bg: $topbar-bg-color;
 // $topbar-dropdown-link-color: #fff;
 // $topbar-dropdown-link-bg: #333;
 // $topbar-dropdown-link-weight: normal;
@@ -1138,7 +1138,7 @@ $topbar-margin-bottom: 5px;
 // $topbar-dropdown-toggle-alpha: 0.4;
 
 // Set the link colors and styles for top-level nav
- $topbar-link-color: scale-color($topbar-bg-color, $lightness: 100%);
+$topbar-link-color: scale-color($topbar-bg-color, $lightness: 100%);
 // $topbar-link-color-hover: #fff;
 // $topbar-link-color-active: #fff;
 // $topbar-link-color-active-hover: #fff;
@@ -1175,7 +1175,7 @@ $topbar-margin-bottom: 5px;
 
 // Divider Styles
 // $topbar-divider-border-bottom: solid 1px  scale-color($topbar-bg-color, $lightness: 43%);
- $topbar-divider-border-top: solid 1px scale-color($topbar-link-color, $lightness: -60%);
+$topbar-divider-border-top: solid 1px scale-color($topbar-link-color, $lightness: -60%);
 
 // Sticky Class
 // $topbar-sticky-class: ".sticky";
@@ -1187,40 +1187,4 @@ $topbar-margin-bottom: 5px;
 
 // $include-html-visibility-classes: $include-html-classes;
 
-@import
-"foundation/components/accordion",
-"foundation/components/alert-boxes",
-"foundation/components/block-grid",
-"foundation/components/breadcrumbs",
-"foundation/components/button-groups",
-"foundation/components/buttons",
-"foundation/components/clearing",
-"foundation/components/dropdown",
-"foundation/components/dropdown-buttons",
-"foundation/components/flex-video",
-"foundation/components/forms",
-"foundation/components/grid",
-"foundation/components/inline-lists",
-"foundation/components/joyride",
-"foundation/components/keystrokes",
-"foundation/components/labels",
-"foundation/components/magellan",
-"foundation/components/orbit",
-"foundation/components/pagination",
-"foundation/components/panels",
-"foundation/components/pricing-tables",
-"foundation/components/progress-bars",
-"foundation/components/range-slider",
-"foundation/components/reveal",
-"foundation/components/side-nav",
-"foundation/components/split-buttons",
-"foundation/components/sub-nav",
-"foundation/components/switch",
-"foundation/components/tables",
-"foundation/components/tabs",
-"foundation/components/thumbs",
-"foundation/components/tooltips",
-"foundation/components/top-bar",
-"foundation/components/type",
-"foundation/components/offcanvas",
-"foundation/components/visibility";
+@import "foundation/components/accordion", "foundation/components/alert-boxes", "foundation/components/block-grid", "foundation/components/breadcrumbs", "foundation/components/button-groups", "foundation/components/buttons", "foundation/components/clearing", "foundation/components/dropdown", "foundation/components/dropdown-buttons", "foundation/components/flex-video", "foundation/components/forms", "foundation/components/grid", "foundation/components/inline-lists", "foundation/components/joyride", "foundation/components/keystrokes", "foundation/components/labels", "foundation/components/magellan", "foundation/components/orbit", "foundation/components/pagination", "foundation/components/panels", "foundation/components/pricing-tables", "foundation/components/progress-bars", "foundation/components/range-slider", "foundation/components/reveal", "foundation/components/side-nav", "foundation/components/split-buttons", "foundation/components/sub-nav", "foundation/components/switch", "foundation/components/tables", "foundation/components/tabs", "foundation/components/thumbs", "foundation/components/tooltips", "foundation/components/top-bar", "foundation/components/type", "foundation/components/offcanvas", "foundation/components/visibility";

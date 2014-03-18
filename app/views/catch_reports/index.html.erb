@@ -15,10 +15,10 @@
 
 <div class="row">
   <div id="list-container" class="small-12 large-8 columns">
-    <div class="pagination-centered">
+    <%= render 'index_table' %>
+    <div id="catch-reports-pagination-container" class="pagination-centered">
       <%= paginate @catch_reports %>
     </div>
-    <%= render 'index_table' %>
   </div>
   <div id="map-container" class="small-12 large-4 columns hide-for-small">
     <iframe width="100%" height="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"
