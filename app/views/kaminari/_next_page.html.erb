@@ -6,6 +6,11 @@
     per_page:      number of items to fetch per page
     remote:        data-remote
 -%>
-<li class="arrow <%= 'unavailable' if current_page.last? %>">
-  <%= link_to raw('&raquo;'), url, :remote => remote %>
+<%#
+<li class="arrow <%= 'unavailable' if current_page.last? ">
+  <%= link_to raw('&raquo;'), url, :remote => remote >
+</li>
+-%>
+<li data-page="<%= total_pages %>" class="arrow <%= 'unavailable' if current_page.last? %>">
+  &raquo;
 </li>

@@ -1,4 +1,4 @@
-<table id="catch-reports-table" data-path="<%= catch_report_path(':id') %>">
+<table id="catch-reports-table">
   <thead>
   <tr>
     <th class="date-column">Dato</th>
@@ -10,8 +10,8 @@
   </tr>
   </thead>
 
-  <tbody>
-  <% @catch_reports.each do |catch_report| %>
+  <tbody data-path="<%= catch_report_path(':id') %>">
+  <% catch_reports.each do |catch_report| %>
       <tr data-id="<%= catch_report.id %>">
         <td class="date-column"><%= catch_report.created_at.strftime("%d/%m-%y") %></td>
         <td class="catch-column"><%= render 'catch_list', catches: catch_report.catches %></td>
@@ -23,3 +23,7 @@
   <% end %>
   </tbody>
 </table>
+
+<div id="catch-reports-pagination-container" class="pagination-centered">
+  <%= paginate @catch_reports %>
+</div>

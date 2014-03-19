@@ -1,0 +1,3 @@
+<%= form_tag(catch_reports_path, remote: true, id: 'filter-form', class: 'hide', method: :get) do %>
+    <%= hidden_field_tag 'page', params[:page] %>
+<% end %>
