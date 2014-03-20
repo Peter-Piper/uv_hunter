@@ -1,3 +1,9 @@
-<%= form_tag(catch_reports_path, remote: true, id: 'filter-form', class: 'hide', method: :get) do %>
-    <%= hidden_field_tag 'page', params[:page] %>
-<% end %>
+<div class="row">
+  <div class="small-4 columns">
+    <a class="tiny secondary radius button">Filter</a>
+
+    <%= form_tag(catch_reports_path, id: 'filter-form', class: 'hide') do %>
+        <%= hidden_field_tag 'page', params[:page] %>
+    <% end %>
+  </div>
+</div>

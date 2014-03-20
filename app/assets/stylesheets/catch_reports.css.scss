@@ -1,5 +1,3 @@
-$tab-color: #3C94BB;
-
 #show-mode-tab-container {
   #list-mode-tab-container {
     padding-right: 0;
@@ -15,38 +13,48 @@ $tab-color: #3C94BB;
   }
 }
 
-#catch-reports-table {
-  margin-bottom: 0px;
+#list-container {
+  #catch-reports-table {
+    margin-bottom: 0px;
 
-  .date-column {
-    width: 75px;
-  }
-
-  .catch-column {
-    ul {
-      margin: 0;
-      list-style-type: none;
-      line-height: inherit;
-      font-size: inherit;
+    .date-column {
+      width: 75px;
     }
 
-    .c-weight {
-      margin-left: 15px;
+    .catch-column {
+      ul {
+        margin: 0;
+        list-style-type: none;
+        line-height: inherit;
+        font-size: inherit;
+      }
+
+      .c-weight {
+        margin-left: 15px;
+      }
+    }
+
+    .lnk-to-show-column {
+      cursor: pointer;
+      padding: 0;
+      text-align: center;
+
+      i {
+        width: 16px;
+        height: 16px;
+      }
     }
   }
 
-  .lnk-to-show-column {
-    cursor: pointer;
-    padding: 0;
-    text-align: center;
+  #catch-reports-pagination-container {
+    margin-top: 1rem;
 
-    i {
-      width:  16px;
-      height: 16px;
+    li {
+      width: 28px;
     }
   }
 }
 
-#catch-reports-pagination-container {
- margin-top: 1rem;
+#map-container{
+  height: 400px;
 }
