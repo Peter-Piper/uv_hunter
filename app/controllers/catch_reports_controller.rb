@@ -70,6 +70,6 @@ class CatchReportsController < ApplicationController
 
   # Never trust parameters from the scary internet, only allow the white list through.
   def catch_report_params
-    params.require(:catch_report).permit(:description, :gps_coords, :user_id, :start_time, :stop_time)
+    params.require(:catch_report).permit(:description, :gps_coords, :photo, :user_id, :start_time, :stop_time)
   end
 end
