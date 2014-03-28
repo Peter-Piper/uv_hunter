@@ -4,7 +4,7 @@
     <h3><%= t('devise.views.registrations.edit.title', resource: model_name) %></h3>
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name), html: {method: :put, role: 'form'}) do |f| %>
         <% update_btn_text = t('helpers.submit.update', model: model_name) %>
-        <div id="edit-box">
+        <div id="edit-box" class="<%= 'hide' if resource.errors.include?(:current_password) %>">
           <div class="form-group">
             <%= f.text_field :first_name, :autofocus => true, class: 'form-control' %>
           </div>
@@ -30,7 +30,7 @@
           <a id='update-btn' href="javascript:void(0);" class="small right radius button"><%= update_btn_text %></a>
         </div>
 
-        <fieldset id="current-pwd-box" class="hide">
+        <fieldset id="current-pwd-box" class="<%= 'hide' unless resource.errors.include?(:current_password) %>">
           <span id="current-pwd-box-closer">&times;</span>
           <p><%= t('devise.views.registrations.edit.current_password') %></p>
 
