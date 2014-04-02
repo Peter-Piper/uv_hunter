@@ -2,14 +2,16 @@
 #
 # Table name: catch_reports
 #
-#  id          :integer          not null, primary key
-#  description :text
-#  gps_coords  :string(255)
-#  user_id     :integer
-#  start_time  :integer
-#  stop_time   :integer
-#  created_at  :datetime
-#  updated_at  :datetime
+#  id                 :integer          not null, primary key
+#  description        :text
+#  user_id            :integer
+#  created_at         :datetime
+#  updated_at         :datetime
+#  photo_file_name    :string(255)
+#  photo_content_type :string(255)
+#  photo_file_size    :integer
+#  photo_updated_at   :datetime
+#  visibility         :string(255)
 #
 
 require 'spec_helper'

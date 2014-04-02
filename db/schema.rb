@@ -11,27 +11,23 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140402130136) do
+ActiveRecord::Schema.define(version: 20140402130829) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "catch_reports", force: true do |t|
     t.text     "description"
-    t.string   "gps_coords"
     t.integer  "user_id"
-    t.integer  "start_time"
-    t.integer  "stop_time"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.string   "photo_file_name"
     t.string   "photo_content_type"
     t.integer  "photo_file_size"
     t.datetime "photo_updated_at"
+    t.string   "visibility"
   end
 
-  add_index "catch_reports", ["start_time"], name: "index_catch_reports_on_start_time", using: :btree
-  add_index "catch_reports", ["stop_time"], name: "index_catch_reports_on_stop_time", using: :btree
   add_index "catch_reports", ["user_id"], name: "index_catch_reports_on_user_id", using: :btree
 
   create_table "catches", force: true do |t|
