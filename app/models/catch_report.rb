@@ -12,6 +12,7 @@
 #  photo_file_size    :integer
 #  photo_updated_at   :datetime
 #  visibility         :string(255)
+#  area_id            :integer
 #
 
 class CatchReport < ActiveRecord::Base
