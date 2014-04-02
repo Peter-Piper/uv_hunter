@@ -1,0 +1,10 @@
+da:
+  activerecord:
+    models:
+      user: Bruger
+    attributes:
+      user:
+        first_name: Fornavn
+        last_name: Efternavn
+        password_confirmation: Gentag password
+        current_password: Nuværende password

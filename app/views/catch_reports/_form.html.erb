@@ -1,39 +1,26 @@
 <div class="row">
   <div class="small-12 columns">
     <%= form_for(@catch_report) do |f| %>
-        <dl class="accordion" data-accordion>
-          <dd>
-            <a href="#panel1">Beretning</a>
-
-            <div id="panel1" class="content active">
-              <%= f.text_area :description %>
-            </div>
-          </dd>
-
-          <dd>
-            <a href="#panel25">Billede</a>
-
-            <div id="panel25" class="content">
-              <%= f.file_field 'photo' %>
-            </div>
-          </dd>
-
-          <dd>
-            <a href="#panel2">Lokation</a>
-
-            <div id="panel2" class="content">
-              <%= f.hidden_field :gps_coords %>
-            </div>
-          </dd>
-
-          <dd>
-            <a href="#panel3">Fangster</a>
-
-            <div id="panel3" class="content">
-              <div id="add-catch-btn" class="button tiny radius">+</div>
-            </div>
-          </dd>
+        <dl class="tabs" data-tab>
+          <dd class="active"><a href="#panel2-1">Tab 1</a></dd>
+          <dd><a href="#panel2-2">Tab 2</a></dd>
+          <dd><a href="#panel2-3">Tab 3</a></dd>
+          <dd><a href="#panel2-4">Tab 4</a></dd>
         </dl>
+        <div class="tabs-content">
+          <div class="content active" id="panel2-1">
+            <p>First panel content goes here...</p>
+          </div>
+          <div class="content" id="panel2-2">
+            <p>Second panel content goes here...</p>
+          </div>
+          <div class="content" id="panel2-3">
+            <p>Third panel content goes here...</p>
+          </div>
+          <div class="content" id="panel2-4">
+            <p>Fourth panel content goes here...</p>
+          </div>
+        </div>
 
         <div class="actions row">
           <div class="small-5 small-offset-3 columns">

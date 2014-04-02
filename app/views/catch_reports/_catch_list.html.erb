@@ -1,5 +1,5 @@
-<% if catches.any? %>
-    <ul>
+<ul>
+  <% if catches.any? %>
       <% catches.each do |catch| %>
           <li>
             <span class="c-name"><%= catch.fish.name %></span>
@@ -7,5 +7,9 @@
             <span class="c-length right"><%= "#{number_with_precision(catch.length, precision: 1)}cm" %></span>
           </li>
       <% end %>
-    </ul>
-<% end %>
+  <% else %>
+      <li class="zero_trip">
+        <%= t('views.catch_reports.zero_trip') %>
+      </li>
+  <% end %>
+</ul>

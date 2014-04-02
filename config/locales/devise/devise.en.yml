@@ -47,6 +47,27 @@ en:
       send_instructions: "You will receive an email with instructions about how to unlock your account in a few minutes."
       send_paranoid_instructions: "If your account exists, you will receive an email with instructions about how to unlock it in a few minutes."
       unlocked: "Your account has been unlocked successfully. Please sign in to continue."
+    views:
+      registrations:
+        new:
+          title: 'Sign up'
+          sign_up_button: 'Sign up'
+        edit:
+          title: 'Edit %{resource}'
+          change_password: "Leave these fields blank if you don't want to change your password."
+          confirmation_missing: 'Currently waiting confirmation for: %{unconfirmed_email}'
+          current_password: 'You must enter your current password to make changes.'
+      passwords:
+        new:
+          title: 'Forgot your password?'
+          explanation: "We'll send password reset instructions."
+          reset_button: 'Reset Password'
+      sessions:
+        new:
+          title: 'Log in'
+          sign_up_link: 'Sign up'
+          forgot_password_link: 'Forgot password?'
+          log_in_button: 'Log in'
   errors:
     messages:
       already_confirmed: "was already confirmed, please try signing in"

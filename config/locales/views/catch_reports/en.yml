@@ -1,0 +1,4 @@
+en:
+  views:
+    catch_reports:
+      zero_trip: 'No catches'

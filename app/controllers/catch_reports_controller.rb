@@ -1,5 +1,5 @@
 class CatchReportsController < ApplicationController
-  skip_before_filter :authenticate_user!, only: [:index]
+  skip_before_filter :authenticate_user!, only: [:index, :show]
   before_action :set_catch_report, only: [:show, :edit, :update, :destroy]
 
   # GET /catch_reports

@@ -1,0 +1,6 @@
+da:
+  activerecord:
+    models:
+      catch_report: Fangstrapport
+    attributes:
+      catch_report:

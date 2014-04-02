@@ -23,7 +23,7 @@ function ready() {
     if ($('.alert-box').length >= 0) {
         setTimeout(function () {
             $('.alert-box .close').click();
-        }, 5000);
+        }, 4000);
     }
 }
 

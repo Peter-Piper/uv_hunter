@@ -19,10 +19,8 @@ $(document).on('click', '.pagination li', function (e) {
     }
 });
 
-$(document).on('click', 'table .lnk-to-show-column', function () {
+$(document).on('click', 'table .lnk-to-show-row', function () {
     var path = $('#catch-reports-table tbody').attr('data-path');
-    var id = $(this).parents('tr').attr('data-id');
-
-    window.location.href = path.replace(':id', id);
+    window.location.href = path.replace(':id', $(this).attr('data-id'));
 });
 

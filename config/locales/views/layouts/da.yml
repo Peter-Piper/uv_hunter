@@ -1,0 +1,7 @@
+da:
+  views:
+    navigation_bar:
+      edit_profile: 'Rediger profil'
+      sign_up: 'Opret bruger'
+      sign_in: 'Log ind'
+      sign_out: 'Log ud'
