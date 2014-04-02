@@ -12,7 +12,7 @@
 
   <tbody data-path="<%= catch_report_path(':id') %>">
   <% catch_reports.each do |catch_report| %>
-      <tr data-id="<%= catch_report.id %>">
+      <tr data-id="<%= catch_report.id %>" class="lnk-to-show-row">
         <td class="date-column"><%= catch_report.created_at.strftime("%d/%m-%y") %></td>
         <td class="catch-column"><%= render 'catch_list', catches: catch_report.catches %></td>
         <td class="hide-for-small"><%= catch_report.gps_coords %></td>

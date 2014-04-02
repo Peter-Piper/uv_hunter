@@ -1,0 +1,7 @@
+en:
+  views:
+    navigation_bar:
+      edit_profile: 'Edit profile'
+      sign_up: 'Sign up'
+      sign_in: 'Log in'
+      sign_out: 'Log out'
