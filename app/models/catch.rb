@@ -15,5 +15,5 @@ class Catch < ActiveRecord::Base
   validates_presence_of(:fish_id)
 
   belongs_to :catch_report
-  belongs_to :fish
+  belongs_to :species
 end

@@ -12,7 +12,7 @@
 
 FactoryGirl.define do
   factory :fish do
-    name 'Fish'
+    name 'Species'
     sequence(:latin) { |n| "Pesca Latinus#{n}" }
     description { "This is a #{name}..." }
 

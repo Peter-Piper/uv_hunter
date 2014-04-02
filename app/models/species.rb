@@ -10,6 +10,6 @@
 #  updated_at  :datetime
 #
 
-class Fish < ActiveRecord::Base
+class Species < ActiveRecord::Base
   validate :name, presence_of:true, uniqueness: true
 end

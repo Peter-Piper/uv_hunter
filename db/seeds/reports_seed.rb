@@ -1,8 +1,8 @@
 # encoding: UTF-8
 fish = [
-    Fish.find_or_create_by(name: 'Havørred'),
-    Fish.find_or_create_by(name: 'Rødstpætte'),
-    Fish.find_or_create_by(name: 'Torsk')
+    Species.find_or_create_by(name: 'Havørred'),
+    Species.find_or_create_by(name: 'Rødstpætte'),
+    Species.find_or_create_by(name: 'Torsk')
 ]
 
 attr = [

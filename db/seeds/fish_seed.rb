@@ -18,4 +18,4 @@
     'Slethvar',
     'Torsk',
     'Tunge'
-].each { |fname| Fish.create(name: fname) }
+].each { |fname| Species.create(name: fname) }

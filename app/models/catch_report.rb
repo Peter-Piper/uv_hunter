@@ -15,7 +15,7 @@
 class CatchReport < ActiveRecord::Base
   belongs_to :user
   has_many :catches, dependent: :destroy
-  has_many :fish, through: :catches
+  has_many :species, through: :catches
 
   has_attached_file :photo,
                     #styles: {thumb: '100x>'},
