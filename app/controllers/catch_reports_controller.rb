@@ -5,7 +5,7 @@ class CatchReportsController < ApplicationController
   # GET /catch_reports
   # GET /catch_reports.json
   def index
-    @catch_reports = CatchReport.includes(catches: :fish).page(params[:page]).per(8)
+    @catch_reports = CatchReport.includes(catches: :species).page(params[:page]).per(8)
   end
 
   # GET /catch_reports/1

@@ -1,5 +1,5 @@
 # encoding: UTF-8
-fish = [
+species = [
     Species.find_or_create_by(name: 'Havørred'),
     Species.find_or_create_by(name: 'Rødstpætte'),
     Species.find_or_create_by(name: 'Torsk')
@@ -20,6 +20,6 @@ attr = [
 
   puts "catch count: #{catch_count}"
   catch_count.times do |c|
-    rep.catches.create!(length: ((attr_index + 1) * (2 + c)) * 16, weight: ((catch_count + 1) * (2 + c)) * 12, fish_id: fish[c].id)
+    rep.catches.create!(length: ((attr_index + 1) * (2 + c)) * 16, weight: ((catch_count + 1) * (2 + c)) * 12, fish_id: species[c].id)
   end
 end

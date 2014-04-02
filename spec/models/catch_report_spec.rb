@@ -20,7 +20,7 @@ require 'spec_helper'
 describe CatchReport do
   it { should belong_to(:user) }
   it { should have_many(:catches).dependent(:destroy) }
-  it { should have_many(:fish).through(:catches) }
+  it { should have_many(:species).through(:catches) }
 
   it { should accept_nested_attributes_for(:catches) }
 end

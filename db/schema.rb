@@ -43,10 +43,12 @@ ActiveRecord::Schema.define(version: 20140402131838) do
     t.decimal  "length"
     t.decimal  "weight"
     t.integer  "catch_report_id"
-    t.integer  "fish_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "species_id"
   end
+
+  add_index "catches", ["species_id"], name: "index_catches_on_species_id", using: :btree
 
   create_table "species", force: true do |t|
     t.string   "name"

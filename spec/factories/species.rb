@@ -1,6 +1,6 @@
 # == Schema Information
 #
-# Table name: fish
+# Table name: species
 #
 #  id          :integer          not null, primary key
 #  name        :string(255)
@@ -11,7 +11,7 @@
 #
 
 FactoryGirl.define do
-  factory :fish do
+  factory :species do
     name 'Species'
     sequence(:latin) { |n| "Pesca Latinus#{n}" }
     description { "This is a #{name}..." }
