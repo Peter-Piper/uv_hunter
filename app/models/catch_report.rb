@@ -23,7 +23,10 @@ class CatchReport < ActiveRecord::Base
   has_attached_file :photo,
                     #styles: {thumb: '100x>'},
                     storage: :dropbox,
-                    dropbox_credentials: Rails.root.join('config/dropbox.yml')
+                    dropbox_credentials: {app_key: ENV['DROPBOX_APP_KEY'], app_secret: ENV['DROPBOX_APP_SECRET'],
+                                          access_token: ENV['DROPBOX_ACCESS_TOKEN'],
+                                          access_token_secret: ENV['DROPBOX_ACCESS_TOKEN_SECRET'],
+                                          user_id: ENV['DROPBOX_USER_ID'], access_type: ENV['DROPBOX_ACCESS_TYPE']}
 
   # Validate content type
   validates_attachment_content_type :photo, :content_type => /\Aimage/
