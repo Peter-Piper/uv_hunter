@@ -13,9 +13,11 @@ gem 'pg'
 
 gem 'devise', '~> 3.2.2'
 
+gem 'figaro' # easy heroku compatible application environment setup
+
 # Use SCSS for stylesheets
 gem 'sass-rails', '~> 4.0.0'
-gem 'foundation-rails', '5.2.1'  # foundation for rails
+gem 'foundation-rails', '5.2.1' # foundation for rails
 gem 'foundation_rails_helper' # pretty 'fields-with-errors'
 
 # Use Uglifier as compressor for JavaScript assets
