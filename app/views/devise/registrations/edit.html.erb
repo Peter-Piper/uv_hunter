@@ -17,6 +17,10 @@
                 <div><%= t('devise.views.registrations.edit.confirmation_missing', unconfirmed_email: resource.unconfirmed_email) %></div>
             <% end %>
           </div>
+          <div class="form-group">
+            <%= f.file_field :avatar %>
+            <%= image_tag(resource.avatar.url(:thumb)) unless resource.avatar_file_name.blank? %>
+          </div>
           <fieldset>
             <p><%= t('devise.views.registrations.edit.change_password') %></p>
 
@@ -32,6 +36,7 @@
 
         <fieldset id="current-pwd-box" class="<%= 'hide' unless resource.errors.include?(:current_password) %>">
           <span id="current-pwd-box-closer">&times;</span>
+
           <p><%= t('devise.views.registrations.edit.current_password') %></p>
 
           <div class="form-group">

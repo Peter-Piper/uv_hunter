@@ -9,7 +9,7 @@ class ApplicationController < ActionController::Base
   protected
 
   def configure_permitted_parameters
-    [:first_name, :last_name].each do |attr|
+    [:first_name, :last_name, :avatar].each do |attr|
       devise_parameter_sanitizer.for(:sign_up) << attr
       devise_parameter_sanitizer.for(:account_update) << attr
     end

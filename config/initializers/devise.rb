@@ -12,7 +12,7 @@ Devise.setup do |config|
   # with default "from" parameter.
   config.mailer_sender = 'no-reply@uv_hunt.com'
 
-  # Configure the class responsible to send e-mails.
+  # Configure the class responsible to send e-mails
   # config.mailer = 'Devise::Mailer'
 
   # ==> ORM configuration
